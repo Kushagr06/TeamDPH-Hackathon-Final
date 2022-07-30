@@ -1,5 +1,8 @@
 {% extends 'base.html' %}
 {% block body %}
+{% if info==[] %}
+<h5 class="container">All Clear Here :)</h5>
+{% else %}
 <h2>Business Name: <span class="text-primary">{{ info[0].business_name }}</span></h2>
 <h4>Here are the products which fall short of the accepted standard.</h4>
     {% for bits in info %}
@@ -12,5 +15,6 @@
         </div>
         {% endif %}
       {% endfor %}
+{% endif %}
 
 {% endblock body %} 
