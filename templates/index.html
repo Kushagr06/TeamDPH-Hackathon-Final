@@ -1,0 +1,22 @@
+  {% extends 'base.html' %}
+  {% block body %}
+    
+    <div class="container">
+      <form action="/" method="POST">
+        <div class="mb-3 lg-6">
+          <label for="inputId">Business Id</label>
+          <input type="id" name="id" class="form-control lg-6" id="id"  placeholder="4a1bc143-a3c0-4249-a942-f30b5801aa30
+          ">
+          <small id="idHelp" class="form-text text-muted">Please enter your id as shown in the placeholder and make sure that the api is active and accessible</small>
+        </div>
+        <a href="/results">
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </a>
+      </form>
+    </div>
+    <!--Result Section-->
+  {% endblock body %} 
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    

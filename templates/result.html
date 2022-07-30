@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block body %}
+<h2>Business Name: <span class="text-primary">{{ info[0].business_name }}</span></h2>
+<h4>Here are the products which fall short of the accepted standard.</h4>
+    {% for bits in info %}
+        {% if not bits.failure_reasons== None %}
+        <div class="container border-bottom border-primary">
+        <h4 class="text-primary">Product ID: #{{ bits.sku_id }}</h4>
+        <h4>Name: {{ bits.product_name }}</h4>
+        <h4>Reasons for Failure with the Protocol:</h4>
+          <h4  class="text-warning">{{ bits.failure_reasons }}</h4>
+        </div>
+        {% endif %}
+      {% endfor %}
+
+{% endblock body %} 
